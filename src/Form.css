@@ -1,0 +1,10 @@
+input {
+  border: 2px solid rgba(129, 236, 236 ,1.0);
+  outline: none;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1em;
+  height: 1.9rem;
+  border-radius: 10px;
+}
+
