@@ -24,7 +24,7 @@ export default function Form({setTodos, todos, setUserInput, userInput}) {
   return (
     <form onSubmit={submitHandler}>
       <input
-        style={{ borderColor: isValid ? "rgba(129, 236, 236 , .5)" : "red" }}
+        style={{ borderColor: isValid ? "#f1c40f" : "red" }}
         onChange={inputHandler}
         type="text"
         value={userInput}

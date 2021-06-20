@@ -2,17 +2,19 @@ import React from 'react';
 import './SingleTodo.css';
 import { BsTrash } from "react-icons/bs";
 
-export default function SingleTodo({todo}) {
+export default function SingleTodo({todo, todos, setTodos}) {
   
-  const deleteHandler = () => {
+  const deleteHandler = (id) => {
+    const filteredTodos = todos.filter(item => item.id !== todo.id);
+    
+    setTodos(filteredTodos)
 
   }
 
   return (
-    <li className="todo" >
-      {console.log(todo)}
+    <li className="todo" id={todo.id}>
       {todo.text}
-      <BsTrash class="bin" onClick={deleteHandler}/>
+      <BsTrash className="bin" onClick={deleteHandler} />
     </li>
   );
 }
