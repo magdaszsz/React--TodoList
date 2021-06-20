@@ -3,14 +3,16 @@ li {
   padding: .5em;
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  box-shadow: var(--shadow);
   display: flex;
   justify-content: space-between;
+  color: var(--text);
+  background-color: var(--bg);
 }
 
 .bin {
   cursor: pointer;
-  color: white;
+  color: var(--text);
 }
 
 .bin:hover {
@@ -18,6 +20,10 @@ li {
 }
 
 li:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--hover-bg);
+  color:var(--hover-text-color);
+}
+
+li:hover .bin {
+  color: var(--hover-text-color);
 }
